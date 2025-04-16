@@ -187,13 +187,42 @@
                 border-radius: var(--border-radius);
             }
         }
+        .legs{
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+
+            .left-leg, .right-leg{
+                position: relative;
+                transform: translateY(-10px);
+                width: 83px;
+                height: 288px;
+                background-color: #0260A6;
+                border-radius: var(--border-radius);
+            }
+            .left-leg{
+                display: flex;
+                justify-content: start;
+            }
+            .right-leg{
+                display: flex;
+                justify-content: end;
+            }
+            .shoe-front{
+                position: absolute;
+                bottom: 0;
+                width: 90px;
+                height: 88px;
+                background-color: #79787D;
+            }
+        }
         .steve{
             position: relative;
             display: flex;
             align-items: center;
             flex-direction: column;
             width: 100%;
-            height: 500px;
+            height: auto;
             border: 1px solid red;
         }
     </style>
@@ -232,12 +261,16 @@
                 <div class="shouder"></div>
             </div>
         </div>
+        <div class="legs">
             <div class="left-leg">
-                <div class="shoe"></div>
+                <div class="shoe-back"></div>
+                <div class="shoe-front"></div>
             </div>
             <div class="right-leg">
-                <div class="shoe"></div>
+                <div class="shoe-back"></div>
+                <div class="shoe-front"></div>
             </div>
+        </div>
     </div>
 </body>
 </html>
