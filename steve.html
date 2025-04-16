@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve - html css</title>
+
+    <!-- 
+        colors:
+        hair #352514
+        skin #FBB29F
+        eye #FFFEFF
+        pupil #03538E
+        nose #CD8F85
+        neck #1B1014
+        tshirt #00ADC5
+        jean(pants) #0260A6
+        shoe #79787D
+    -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            --border-radius: 4px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .head{
+            position: relative;
+            width: 180px;
+            height: 150px;
+            background-color: #352514;
+            border-radius: var(--border-radius);
+        }
+        .front{
+            position: absolute;
+            width: 140px;
+            height: 24px;
+            background-color: #FBB29F;
+            top: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        .face{
+            position: relative;
+            width: 170px;
+            height: 108px;
+            background-color: #FBB29F;
+            top: 56px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: var(--border-radius);
+            
+            .eyes{
+                position: absolute;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                top: 15px;
+
+                .left-eye, .right-eye{
+                    width: 42px;
+                    height: 23px;
+                    background-color: #FFFFFF;
+                    border-radius: var(--border-radius);
+
+                    .pupil{
+                        width: 23px;
+                        height: 23px;
+                        background-color: #03538E;
+                    }
+                }
+                .left-eye{
+                    display: flex;
+                    justify-content: end;
+                }
+                .right-eye{
+                    display: flex;
+                    justify-content: start;
+                }
+            }
+            .nose{
+                position: absolute;
+                top: 38px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 43px;
+                height: 23px;
+                background-color: #CD8F85;
+                border-radius: (--border-radius);
+            }
+            .beard{
+                position: absolute;
+                width: 88px;
+                height: 47px;
+                background-color: #352514;
+                top: 61px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                .moustache{
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 42px;
+                    height: 23px;
+                    background-color: #FBB29F;
+                    border-radius: 0 0 var(--border-radius) var(--border-radius);
+                }
+            }
+        }
+        .neck{
+            position: absolute;
+            width: 30px;
+            height: 7px;
+            background-color: #1B1014;
+            top: 164px;
+        }
+        .trunk{
+            display: flex;
+            position: relative;
+            gap: 5px;
+
+            .body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                transform: translateY(19px);            
+                width: 170px;
+                height: 250px;
+                background-color: #00ADC5;
+                border-radius: var(--border-radius);
+                
+                .tshirt-neck-top{
+                    position: absolute;
+                    top: 0;
+                    width: 88px;
+                    height: 21px;
+                    background-color: #FBB29F;
+                    border-radius: 0 0 var(--border-radius) var(--border-radius);
+                }
+                .tshirt-neck-bottom{
+                    position: absolute;
+                    top: 21px;
+                    width: 42px;
+                    height: 19px;
+                    background-color: #FBB29F;
+                    border-radius: 0 0 var(--border-radius) var(--border-radius);
+                }
+            }
+            .left-arm{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                transform: translateY(19px);
+                width: 85px;
+                height: 280px;
+                background-color: #FBB29F;
+                border-radius: var(--border-radius);
+
+            }
+            .right-arm{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                transform: translateY(19px);
+                width: 85px;
+                height: 280px;
+                background-color: #FBB29F;
+                border: var(--border-radius);
+            }
+            .shouder{
+                position: absolute;
+                width: 90px;
+                height: 88px;
+                background-color: #00ADC5;
+                border-radius: var(--border-radius);
+            }
+        }
+        .steve{
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 500px;
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="steve">
+        <div class="head">
+            <div class="hair"></div>
+            <div class="front"></div>
+            <div class="face">
+                <div class="eyes">
+                    <div class="left-eye">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="right-eye">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+                <div class="nose"></div>
+                <div class="beard">
+                    <div class="moustache"></div>
+                </div>
+            </div>
+        </div>
+        <div class="neck"></div>
+        <div class="trunk">
+            <div class="left-arm">
+                <div class="shouder"></div>
+            </div>
+            <div class="body">
+                <div class="tshirt-neck-top"></div>
+                <div class="tshirt-neck-bottom"></div>
+            </div>
+            <div class="right-arm">
+                <div class="shouder"></div>
+            </div>
+        </div>
+            <div class="left-leg">
+                <div class="shoe"></div>
+            </div>
+            <div class="right-leg">
+                <div class="shoe"></div>
+            </div>
+    </div>
+</body>
+</html>
