@@ -4,20 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steve - html css</title>
-
-    <!-- 
-        colors:
-        hair #352514
-        skin #FBB29F
-        eye #FFFEFF
-        pupil #03538E
-        nose #CD8F85
-        neck #1B1014
-        tshirt #00ADC5
-        jean(pants) #0260A6
-        shoe #79787D
-    -->
-
     <style>
         *{
             margin: 0;
@@ -158,18 +144,7 @@
                     border-radius: 0 0 var(--border-radius) var(--border-radius);
                 }
             }
-            .left-arm{
-                position: relative;
-                display: flex;
-                justify-content: center;
-                transform: translateY(19px);
-                width: 85px;
-                height: 280px;
-                background-color: #FBB29F;
-                border-radius: var(--border-radius);
-
-            }
-            .right-arm{
+            .left-arm, .right-arm{
                 position: relative;
                 display: flex;
                 justify-content: center;
@@ -193,6 +168,23 @@
             gap: 3px;
 
             .left-leg, .right-leg{
+                display: flex;
+            }
+            .left-leg{
+                justify-content: end;
+            }
+            .right-leg{
+                justify-content: start;
+            }
+            .shoe-back{
+                position: absolute;
+                bottom: 0;
+                width: 90px;
+                height: 75px;
+                background-color: #79787D;
+                border-radius: var(--border-radius);
+            }
+            .leg{
                 position: relative;
                 transform: translateY(-10px);
                 width: 83px;
@@ -200,20 +192,13 @@
                 background-color: #0260A6;
                 border-radius: var(--border-radius);
             }
-            .left-leg{
-                display: flex;
-                justify-content: start;
-            }
-            .right-leg{
-                display: flex;
-                justify-content: end;
-            }
             .shoe-front{
                 position: absolute;
                 bottom: 0;
                 width: 90px;
-                height: 88px;
+                height: 40px;
                 background-color: #79787D;
+                border-radius: var(--border-radius);
             }
         }
         .steve{
@@ -226,7 +211,6 @@
             border: 1px solid red;
         }
     </style>
-
 </head>
 <body>
     <div class="steve">
@@ -264,10 +248,12 @@
         <div class="legs">
             <div class="left-leg">
                 <div class="shoe-back"></div>
+                <div class="leg"></div>
                 <div class="shoe-front"></div>
             </div>
             <div class="right-leg">
                 <div class="shoe-back"></div>
+                <div class="leg"></div>
                 <div class="shoe-front"></div>
             </div>
         </div>
